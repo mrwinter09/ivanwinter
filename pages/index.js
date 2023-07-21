@@ -13,6 +13,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>WagWan</h1>
     </div>
   )
 }
