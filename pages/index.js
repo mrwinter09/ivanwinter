@@ -1,6 +1,7 @@
 /** @format */
 
 import Head from 'next/head'
+import NavBar from '../components/NavBar/NavBar/NavBar'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>WagWan</h1>
+      <NavBar />
     </div>
   )
 }
