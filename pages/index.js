@@ -1,7 +1,9 @@
 /** @format */
 
 import Head from 'next/head'
-import NavBar from '../components/NavBar/NavBar/NavBar'
+import NavBar from '../components/NavBar/NavBar'
+import Main from '../components/Main/Main'
+import About from '../components/About/About'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
+      <Main />
+      <About />
     </div>
   )
 }
