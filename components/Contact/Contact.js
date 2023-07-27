@@ -29,7 +29,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Name Here</h2>
+                <h2 className="py-2">Ivan Winter</h2>
                 <p>Front-end Developer</p>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
@@ -74,7 +74,8 @@ const Contact = () => {
               <form
                 action="https://getform.io/f/f9c1847d-cbc0-4a5b-8810-e3eadf58cbb2"
                 method="POST"
-                enctype="multipart/form-data">
+                enctype="multipart/form-data"
+                target="_blank">
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
@@ -83,6 +84,10 @@ const Contact = () => {
                       type="text"
                       name="name"
                     />
+                    <input
+                      type="hidden"
+                      name="_gotcha"
+                      className="hidden"></input>
                   </div>
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">
@@ -127,6 +132,7 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="file"
                     name="resume[]"
+                    accept=".pdf"
                   />
                 </div>
                 <button className="w-full p-4 text-gray mt-4" type="submit">
