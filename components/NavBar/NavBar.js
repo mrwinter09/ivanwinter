@@ -59,7 +59,7 @@ const NavBar = () => {
               src="/../public/assets/ivanwinter.png"
               alt="/"
               width="125"
-              height="50"
+              height="125"
             />
           </Link>
           <div>

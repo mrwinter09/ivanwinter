@@ -33,4 +33,6 @@ yarn-error.log*
 
 .gitignore
 
-.firebase
+.firebasere
+firebase-debug.log
+firebase.json
