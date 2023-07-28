@@ -1,0 +1,280 @@
+[debug] [2023-07-28T10:47:14.198Z] ----------------------------------------------------------------------
+[debug] [2023-07-28T10:47:14.199Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting:ivan-winter
+[debug] [2023-07-28T10:47:14.200Z] CLI Version:   12.4.5
+[debug] [2023-07-28T10:47:14.200Z] Platform:      darwin
+[debug] [2023-07-28T10:47:14.200Z] Node Version:  v20.0.0
+[debug] [2023-07-28T10:47:14.200Z] Time:          Fri Jul 28 2023 12:47:14 GMT+0200 (Central European Summer Time)
+[debug] [2023-07-28T10:47:14.200Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-28T10:47:14.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-28T10:47:14.246Z] > authorizing via signed-in user (ivan.winter09@gmail.com)
+[debug] [2023-07-28T10:47:14.246Z] [iam] checking project fir-authwinterdao for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-28T10:47:14.247Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions [none]
+[debug] [2023-07-28T10:47:14.247Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:14.247Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-28T10:47:15.092Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions 200
+[debug] [2023-07-28T10:47:15.092Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-28T10:47:15.093Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao [none]
+[debug] [2023-07-28T10:47:15.483Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao 200
+[debug] [2023-07-28T10:47:15.483Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao {"projectId":"fir-authwinterdao","projectNumber":"984500062529","displayName":"firebaseAuthWinterdao","name":"projects/fir-authwinterdao","resources":{"hostingSite":"fir-authwinterdao","realtimeDatabaseInstance":"fir-authwinterdao-default-rtdb"},"state":"ACTIVE","etag":"1_db4531aa-93a4-4551-934c-bf7456cabaab"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Linting and checking validity of types...
+
+[info] - info Creating an optimized production build...
+
+[info] - info Compiled successfully
+
+[info] - info Collecting page data...
+
+[info] - info Generating static pages (0/7)
+
+[info] - info Generating static pages (1/7)
+
+[info] - info Generating static pages (3/7)
+
+[info] - info Generating static pages (5/7)
+
+[info] - info Generating static pages (7/7)
+
+[info] - info Finalizing page optimization...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ ○ /                                      4.58 kB        87.5 kB
+├   /_app                                  0 B            82.9 kB
+├ ○ /404                                   182 B          83.1 kB
+├ ○ /blogpage                              1.51 kB        84.7 kB
+├ ○ /netflix                               1.55 kB        84.8 kB
+├ ○ /pokemon                               1.52 kB        84.7 kB
+└ ○ /winterdao                             1.5 kB         84.7 kB
++ First Load JS shared by all              86 kB
+  ├ chunks/framework-7a7e500878b44665.js   45.2 kB
+  ├ chunks/main-ab47fb9bee38a4da.js        27.7 kB
+  ├ chunks/pages/_app-04b725084c837b67.js  9.2 kB
+  ├ chunks/webpack-8fa1640cc84ba8fe.js     750 B
+  └ css/154cdfd657d63013.css               3.07 kB
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info] 
+[debug] [2023-07-28T10:47:35.390Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "site": "ivan-winter",
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "europe-west1"
+      },
+      "rewrites": [
+        {
+          "source": "/**",
+          "function": {
+            "functionId": "ssrivanwinter",
+            "region": "europe-west1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/ivan-winter/hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/ivan-winter/functions",
+      "codebase": "firebase-frameworks-ivan-winter"
+    }
+  ]
+}
+[debug] [2023-07-28T10:47:35.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-28T10:47:35.390Z] > authorizing via signed-in user (ivan.winter09@gmail.com)
+[debug] [2023-07-28T10:47:35.390Z] [iam] checking project fir-authwinterdao for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-07-28T10:47:35.391Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions [none]
+[debug] [2023-07-28T10:47:35.391Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:35.391Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-28T10:47:36.189Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions 200
+[debug] [2023-07-28T10:47:36.190Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-28T10:47:36.191Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/fir-authwinterdao/locations/-/functions [none]
+[debug] [2023-07-28T10:47:36.793Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/fir-authwinterdao/locations/-/functions 200
+[debug] [2023-07-28T10:47:36.793Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/fir-authwinterdao/locations/-/functions {}
+[debug] [2023-07-28T10:47:36.796Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/fir-authwinterdao/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-07-28T10:47:37.967Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/fir-authwinterdao/locations/-/functions 200
+[debug] [2023-07-28T10:47:37.968Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/fir-authwinterdao/locations/-/functions {}
+[info] i  hosting: The following function(s) are pinned to site ivan-winter and will be deployed as well: ssrivanwinter 
+[info] 
+[info] === Deploying to 'fir-authwinterdao'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-07-28T10:47:37.973Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao [none]
+[debug] [2023-07-28T10:47:38.340Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao 200
+[debug] [2023-07-28T10:47:38.340Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao {"projectId":"fir-authwinterdao","projectNumber":"984500062529","displayName":"firebaseAuthWinterdao","name":"projects/fir-authwinterdao","resources":{"hostingSite":"fir-authwinterdao","realtimeDatabaseInstance":"fir-authwinterdao-default-rtdb"},"state":"ACTIVE","etag":"1_db4531aa-93a4-4551-934c-bf7456cabaab"}
+[info] i  functions: preparing codebase firebase-frameworks-ivan-winter for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-07-28T10:47:38.344Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-28T10:47:38.344Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:38.346Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-28T10:47:38.346Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:38.348Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-28T10:47:38.349Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:38.351Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-28T10:47:38.351Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:39.088Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-28T10:47:39.088Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-28T10:47:39.089Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-28T10:47:39.089Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com [omitted]
+[warn] ⚠  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2023-07-28T10:47:39.090Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2023-07-28T10:47:39.090Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:39.347Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-28T10:47:39.347Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-07-28T10:47:39.352Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-28T10:47:39.352Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2023-07-28T10:47:39.352Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2023-07-28T10:47:39.353Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:40.785Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com:enable 200
+[debug] [2023-07-28T10:47:40.786Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2023-07-28T10:47:40.791Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com:enable 200
+[debug] [2023-07-28T10:47:40.791Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2023-07-28T10:47:50.788Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-28T10:47:50.788Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:50.793Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-28T10:47:50.793Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:51.908Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-28T10:47:51.909Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-07-28T10:47:51.920Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-28T10:47:51.920Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-07-28T10:47:51.923Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao/adminSdkConfig [none]
+[debug] [2023-07-28T10:47:52.292Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao/adminSdkConfig 200
+[debug] [2023-07-28T10:47:52.293Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao/adminSdkConfig {"projectId":"fir-authwinterdao","databaseURL":"https://fir-authwinterdao-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"fir-authwinterdao.appspot.com"}
+[debug] [2023-07-28T10:47:52.293Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fir-authwinterdao/configs [none]
+[debug] [2023-07-28T10:47:53.175Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fir-authwinterdao/configs 200
+[debug] [2023-07-28T10:47:53.176Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/fir-authwinterdao/configs {}
+[debug] [2023-07-28T10:47:53.179Z] Validating nodejs source
+[debug] [2023-07-28T10:47:53.796Z] > [functions] package.json contents: {
+  "name": "portfolio-ivanwinter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "next": "13.4.11",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "sharp": "^0.32.1",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
+[debug] [2023-07-28T10:47:53.796Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-ivan-winter to determine what to deploy 
+[debug] [2023-07-28T10:47:53.797Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-07-28T10:47:53.804Z] Found firebase-functions binary at '/Users/mrwinter/Desktop/Projecten/Portfolio/portfolio-ivanwinter/.firebase/ivan-winter/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8927
+
+[debug] [2023-07-28T10:47:54.223Z] Got response from /__/functions.yaml {"endpoints":{"ssrivanwinter":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["europe-west1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrivanwinter"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase/ivan-winter/functions directory for uploading... 
+[info] i  functions: packaged /Users/mrwinter/Desktop/Projecten/Portfolio/portfolio-ivanwinter/.firebase/ivan-winter/functions (69.79 MB) for uploading 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-07-28T10:47:55.861Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com [none]
+[debug] [2023-07-28T10:47:55.861Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:55.861Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com [none]
+[debug] [2023-07-28T10:47:55.861Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:55.862Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/pubsub.googleapis.com [none]
+[debug] [2023-07-28T10:47:55.862Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/pubsub.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:55.863Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/storage.googleapis.com [none]
+[debug] [2023-07-28T10:47:55.863Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/storage.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:56.401Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com 200
+[debug] [2023-07-28T10:47:56.401Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2023-07-28T10:47:56.402Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com:enable [none]
+[debug] [2023-07-28T10:47:56.402Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com:enable x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:56.474Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/storage.googleapis.com 200
+[debug] [2023-07-28T10:47:56.474Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-07-28T10:47:56.746Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com 200
+[debug] [2023-07-28T10:47:56.746Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2023-07-28T10:47:56.747Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com:enable [none]
+[debug] [2023-07-28T10:47:56.747Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:47:56.888Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/pubsub.googleapis.com 200
+[debug] [2023-07-28T10:47:56.889Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-07-28T10:47:57.694Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com:enable 200
+[debug] [2023-07-28T10:47:57.694Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com:enable [omitted]
+[debug] [2023-07-28T10:47:57.798Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com:enable 200
+[debug] [2023-07-28T10:47:57.799Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2023-07-28T10:48:07.696Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com [none]
+[debug] [2023-07-28T10:48:07.696Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:48:07.800Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com [none]
+[debug] [2023-07-28T10:48:07.801Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:48:09.470Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com 200
+[debug] [2023-07-28T10:48:09.470Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2023-07-28T10:48:09.678Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com 200
+[debug] [2023-07-28T10:48:09.678Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/fir-authwinterdao/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-07-28T10:48:09.685Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/984500062529/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-28T10:48:09.686Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/984500062529/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-28T10:48:10.756Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/984500062529/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-28T10:48:10.756Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/984500062529/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-984500062529@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"100485868458269479270"}}
+[debug] [2023-07-28T10:48:10.958Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/984500062529/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-28T10:48:10.958Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/984500062529/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-984500062529@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"102575892280352824628"}}
+[debug] [2023-07-28T10:48:10.961Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao [none]
+[debug] [2023-07-28T10:48:11.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao 200
+[debug] [2023-07-28T10:48:11.472Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-authwinterdao {"projectId":"fir-authwinterdao","projectNumber":"984500062529","displayName":"firebaseAuthWinterdao","name":"projects/fir-authwinterdao","resources":{"hostingSite":"fir-authwinterdao","realtimeDatabaseInstance":"fir-authwinterdao-default-rtdb"},"state":"ACTIVE","etag":"1_d6720ae5-f94e-4210-a118-b0ac8cbd3c97"}
+[debug] [2023-07-28T10:48:11.477Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ivan-winter/versions [none]
+[debug] [2023-07-28T10:48:11.477Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ivan-winter/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-07-28T10:48:12.742Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ivan-winter/versions 200
+[debug] [2023-07-28T10:48:12.742Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ivan-winter/versions {"name":"projects/984500062529/sites/ivan-winter/versions/2b749aef8e935aaa","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-07-28T10:48:12.743Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-07-28T10:48:12.743Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions [none]
+[debug] [2023-07-28T10:48:12.743Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions x-goog-quota-user=projects/fir-authwinterdao
+[debug] [2023-07-28T10:48:12.743Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-07-28T10:48:13.552Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions 200
+[debug] [2023-07-28T10:48:13.553Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-authwinterdao:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-07-28T10:48:13.553Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-07-28T10:48:13.554Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/fir-authwinterdao/locations/europe-west1/functions:generateUploadUrl [none]
+[debug] [2023-07-28T10:48:16.556Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/fir-authwinterdao/locations/europe-west1/functions:generateUploadUrl 200
+[debug] [2023-07-28T10:48:16.556Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/fir-authwinterdao/locations/europe-west1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-984500062529-europe-west1/d1915b4d-0903-44dd-bd18-519757a23561.zip?GoogleAccessId=service-984500062529@gcf-admin-robot.iam.gserviceaccount.com&Expires=1690543096&Signature=tAn8pZGIxNFu0yV5LYdjLO7%2B3P8i86gWf1a8MWJeE5gVRUp79ElYtaVQhyu%2BYjMDzzXILIVkywcvhf73AezrwB%2B5f%2BQwqiIFi0y6GlkI5E2OtoETsNEOithB6XVlHPPMZdqEYcd20Ez59OOZkAmflmRdJWaUPTYMzH%2BbWdr08nS62%2BihdLnoW90ZVK8Z7LSQA764VQJ00toktbzLsWoo%2Fm2cnKX1S95H3fmm4Dsa1IAmF54I8jSDDYpSLY435s7ScIxpTpMnqtFF89fCzTpFrkcWsMIrnS5%2FwWtAKfnwz%2BOQvJu%2Fnqzx0FhNBMq3MU0uCAaq7Yt2AxxKqNNHHOG7dw%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-984500062529-europe-west1","object":"d1915b4d-0903-44dd-bd18-519757a23561.zip"}}
+[debug] [2023-07-28T10:48:16.558Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-984500062529-europe-west1/d1915b4d-0903-44dd-bd18-519757a23561.zip GoogleAccessId=service-984500062529%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1690543096&Signature=tAn8pZGIxNFu0yV5LYdjLO7%2B3P8i86gWf1a8MWJeE5gVRUp79ElYtaVQhyu%2BYjMDzzXILIVkywcvhf73AezrwB%2B5f%2BQwqiIFi0y6GlkI5E2OtoETsNEOithB6XVlHPPMZdqEYcd20Ez59OOZkAmflmRdJWaUPTYMzH%2BbWdr08nS62%2BihdLnoW90ZVK8Z7LSQA764VQJ00toktbzLsWoo%2Fm2cnKX1S95H3fmm4Dsa1IAmF54I8jSDDYpSLY435s7ScIxpTpMnqtFF89fCzTpFrkcWsMIrnS5%2FwWtAKfnwz%2BOQvJu%2Fnqzx0FhNBMq3MU0uCAaq7Yt2AxxKqNNHHOG7dw%3D%3D
+[debug] [2023-07-28T10:48:16.558Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-984500062529-europe-west1/d1915b4d-0903-44dd-bd18-519757a23561.zip [stream]
