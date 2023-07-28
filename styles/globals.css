@@ -44,4 +44,8 @@ html {
   [type='submit'] {
     background-image: linear-gradient(to right, var(--tw-gradient-stops));
   }
+
+  button:disabled {
+    @apply bg-gradient-to-r from-[#4d4d4f] to-[#c3d3f4];
+  }
 }

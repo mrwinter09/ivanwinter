@@ -28,12 +28,12 @@ const Projects = () => {
           />
           <Project
             image={blogsiteImg}
-            title="Blog Site"
+            title="NewsBlog Site"
             projectUrl="/blogpage"
           />
           <Project
             image={pokemonImg}
-            title="Battle App"
+            title="Pokemon Battle App"
             projectUrl="/pokemon"
           />
         </div>

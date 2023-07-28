@@ -37,8 +37,12 @@ const winterdao = () => {
             order to save your favorite crypto. This is made possible with
             Firebase/Firestore.
           </p>
-          <button className="px-8 py-4 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-4 mt-4">Code</button>
+          <Link href="https://www.winterdao.org" target="_blank">
+            <button className="px-8 py-4 mt-4 mr-8">Demo</button>
+          </Link>
+          <button disabled className="px-8 py-4 mt-4">
+            Code
+          </button>
         </div>
 
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
@@ -47,10 +51,16 @@ const winterdao = () => {
 
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiRadioButtonFill className="pr-1" /> HTML
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Javascript
+                <RiRadioButtonFill className="pr-1" /> CSS
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> JavaScript
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> ReactJs
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Firebase

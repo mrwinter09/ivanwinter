@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import logo from '/public/assets/ivanwinter.png'
 import { useRouter } from 'next/router'
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
@@ -55,12 +56,7 @@ const NavBar = () => {
         }>
         <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
           <Link href="/">
-            <Image
-              src="/../public/assets/ivanwinter.png"
-              alt="/"
-              width="125"
-              height="125"
-            />
+            <Image src={logo} width="125" height="125" alt="" />
           </Link>
           <div>
             <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
@@ -109,12 +105,7 @@ const NavBar = () => {
             <div>
               {/*  */}
               <div className="flex w-full items-center justify-between">
-                <Image
-                  src="/../public/assets/ivanwinter.png"
-                  alt="/"
-                  width="87"
-                  height="35"
-                />
+                <Image src={logo} width="87" height="35" alt="" />
                 <div
                   onClick={handleNav}
                   className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">

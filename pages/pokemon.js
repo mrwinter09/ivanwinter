@@ -28,17 +28,26 @@ const pokemon = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-            This app was build using react js and is hosted on Firebase. Users
-            are able to search Crypto coins from the chart, to retrieve the
-            current information. You will be able to view the information as
-            well as the specific marketcap and volume from that particular token
-            intergrated with the coingecho API. User authentication is available
-            so you can signup & signin to your account with an email address in
-            order to save your favorite crypto. This is made possible with
-            Firebase/Firestore.
+            This app was built using React JS and is hosted on Firebase. Users
+            are able to search for Pokemon to see their stats, and if they
+            create an account, they can engage in battles to determine the
+            better Pokemon. User authentication is available, allowing users to
+            sign up and sign in to their accounts using an email address. This
+            functionality is made possible with Firebase. As part of my
+            education at Novi Collega Web Development, I developed this
+            application to graduate. It allowed me to apply my skills in React
+            JS and Firebase to create an interactive and engaging user
+            experience. I am passionate about web development and continually
+            strive to enhance my expertise in the field.
           </p>
-          <button className="px-8 py-4 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-4 mt-4">Code</button>
+          <button disabled className="px-8 py-4 mt-4 mr-8">
+            Demo
+          </button>
+          <Link
+            href="https://github.com/mrwinter09/pokemon2023"
+            target="_blank">
+            <button className="px-8 py-4 mt-4">Code</button>
+          </Link>
         </div>
 
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
@@ -47,16 +56,19 @@ const pokemon = () => {
 
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiRadioButtonFill className="pr-1" /> HTML
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Javascript
+                <RiRadioButtonFill className="pr-1" /> CSS
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> JavaScript
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> ReactJs
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Firebase
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Coingecho API
               </p>
             </div>
           </div>

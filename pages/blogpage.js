@@ -28,17 +28,25 @@ const blogpage = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-            This app was build using react js and is hosted on Firebase. Users
-            are able to search Crypto coins from the chart, to retrieve the
-            current information. You will be able to view the information as
-            well as the specific marketcap and volume from that particular token
-            intergrated with the coingecho API. User authentication is available
-            so you can signup & signin to your account with an email address in
-            order to save your favorite crypto. This is made possible with
-            Firebase/Firestore.
+            Introducing a dynamic blog site application crafted by me for a
+            company. This innovative platform allows users to access the latest
+            blogs effortlessly displayed on the first page, ensuring they stay
+            up-to-date with the most recent content. On the second page, an
+            archive of older posts awaits, offering a rich repository of past
+            articles for exploration. This application is powered by React JS
+            with Javascript, providing a seamless and engaging user experience.
+            To ensure efficient data management and storage, the application is
+            hosted on Firebase with a Firestore backend. With a user-friendly
+            interface and efficient navigation, this blog site promises an
+            enhanced reading experience for visitors, making it an ideal
+            solution for your companys content needs.
           </p>
-          <button className="px-8 py-4 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-4 mt-4">Code</button>
+          <button disabled className="px-8 py-4 mt-4 mr-8">
+            Demo
+          </button>
+          <Link href="https://github.com/mrwinter09/sb" target="_blank">
+            <button className="px-8 py-4 mt-4">Code</button>
+          </Link>
         </div>
 
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
@@ -47,16 +55,19 @@ const blogpage = () => {
 
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiRadioButtonFill className="pr-1" /> HTML
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Javascript
+                <RiRadioButtonFill className="pr-1" /> CSS
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> JavaScript
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> ReactJs
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Firebase
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Coingecho API
               </p>
             </div>
           </div>

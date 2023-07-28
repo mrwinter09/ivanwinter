@@ -37,8 +37,12 @@ const netflix = () => {
             order to save your favorite crypto. This is made possible with
             Firebase/Firestore.
           </p>
-          <button className="px-8 py-4 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-4 mt-4">Code</button>
+          <button disabled className="px-8 py-4 mt-4 mr-8">
+            Demo
+          </button>
+          <button disabled className="px-8 py-4 mt-4">
+            Code
+          </button>
         </div>
 
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
